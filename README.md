@@ -8,6 +8,29 @@ An agent skill that makes Claude Code, Codex and other agents reason from first 
 
 When a request rests on "that's how it's done", "it can't be done" or "it has always cost this much", the agent breaks the problem down to what is verifiably true, prices the floor, and rebuilds options from the facts alone. Each step has a done-when check, so the agent can't jump straight to an answer.
 
+## What first-principles thinking is
+
+Most of the time we copy. We do what worked last time, or what everyone else does. That's fast and usually fine. It goes wrong when the thing we're copying was never true, or stopped being true.
+
+Thinking from first principles means asking what you actually know is true, setting aside what you've only assumed, and building your answer from the true part. You don't have to dig to the bottom of the universe. Going one or two levels deeper than everyone else is usually enough.
+
+Farnam Street explains it with a Lego house. Look at the house and you'll move a few bricks around. Take it apart and you can build a better house, or something else entirely. Elon Musk's batteries are the version with numbers. Everyone said battery packs cost $600 per kWh and always would. The materials inside cost about $80.
+
+It takes more effort than copying, so save it for problems where the usual answer is expensive, you're stuck, or things have changed.
+
+## What makes this skill different
+
+If you just tell a model to "think from first principles", it decides what that means, and you can end up with the usual answer in new words. This skill gives the agent fixed steps instead, and you can check each one.
+
+- Every step has a clear finish line, so the agent can't skip ahead.
+- Every claim is labelled as a fact or an assumption. A fact needs a source. "That's how it's done" counts as an assumption.
+- The agent has to put a number on the best possible outcome, like what the raw materials cost. The gap between that and today is the opportunity.
+- At least one idea has to be genuinely different from what you do now, not a tweak.
+- Each idea comes with what would prove it wrong and the cheapest way to test that.
+- It notices phrases like "industry standard" or "it's never been done" and questions them.
+- It stays small. The engineering, product and strategy guides load only when needed.
+- You get the same short note every time: the goal, the facts and assumptions, the best possible number, the options, and a recommendation.
+
 ## What the agent does
 
 1. **States the goal as an outcome**, without naming the current solution.
